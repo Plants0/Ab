@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 50px;
+      color: #00796b;
+    }
+
+    .content {
+      margin-top: 20px;
+      font-size: 1.5em; /* تكبير حجم النص */
+      color: #00796b; /* تغيير اللون ليتناسق مع باقي الصفحة */
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #00796b;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h1>من نحن</h1>
+  <div class="content">
+    <p>
+      نحن فريق ملتزم بتقديم حلول مبتكرة لتطوير حياتك اليومية وتحقيق أهدافك. 
+      نؤمن بأن التغيير يبدأ بخطوات صغيرة تؤدي إلى تحسينات كبيرة ومستدامة. 
+      الفريق متكون من أبو بكر ومعلمي قسم الكمبيوتر
+    </p>
+  </div>
+  
+  <a id="contactButton" class="button">اتصل بنا الآن</a>
+
+  <script>
+    const contactButton = document.getElementById('contactButton');
+    const phoneNumber = "01027053221"; // رقم الهاتف
+
+    // التحقق من نوع الجهاز
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+      // هاتف محمول
+      contactButton.href = `tel:${phoneNumber}`;
+    } else {
+      // كمبيوتر
+      contactButton.href = `https://wa.me/201027053221`;  // رقمك في واتساب
+    }
+  </script>
+</body>
+</html>
